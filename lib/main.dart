@@ -1,7 +1,9 @@
-import 'package:d2postmaster_flutter/bottom_navigation.dart';
+import 'package:d2postmaster_flutter/login_view.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 
-void main() {
+Future<void> main() async {
+  await dotenv.load();
   runApp(const MyApp());
 }
 
@@ -25,7 +27,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.cyan,
       ),
-      home: const BottomNavigation(title: 'Postmaster'),
+      home: const LoginView(),
     );
   }
 }
